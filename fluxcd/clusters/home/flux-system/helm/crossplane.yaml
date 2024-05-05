@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: crossplane
+  namespace: tools
+spec:
+  chart:
+    spec:
+      chart: charts/crossplane
+      sourceRef:
+        kind: GitRepository
+        name: j6nca-charts
+        namespace: flux-system
+      version: 2024.2.1
+  interval: 1m0s
