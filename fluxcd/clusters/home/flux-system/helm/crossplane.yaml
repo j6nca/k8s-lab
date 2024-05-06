@@ -11,5 +11,5 @@ spec:
         kind: GitRepository
         name: j6nca-charts
         namespace: flux-system
-      version: 2024.2.1
+      version: 1.0.0
   interval: 1m0s
