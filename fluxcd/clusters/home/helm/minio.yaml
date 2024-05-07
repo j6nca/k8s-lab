@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: minio-operator
+  namespace: minio-operator
+spec:
+  chart:
+    spec:
+      chart: charts/minio
+      sourceRef:
+        kind: GitRepository
+        name: j6nca-charts
+        namespace: flux-system
+      version: 1.0.0
+  interval: 1m0s
