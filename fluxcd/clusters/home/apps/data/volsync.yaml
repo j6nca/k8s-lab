@@ -1,12 +1,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: kube-prometheus-stack
-  namespace: monitoring
+  name: volsync
+  namespace: data
 spec:
   chart:
     spec:
-      chart: charts/kube-prometheus-stack
+      chart: charts/volsync
       sourceRef:
         kind: GitRepository
         name: j6nca-charts
