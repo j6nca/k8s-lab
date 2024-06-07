@@ -4,13 +4,16 @@ These are set up notes taken from the docs found [here](https://www.talos.dev/v1
 Troubleshooting docs found [here](https://www.talos.dev/v1.7/introduction/troubleshooting/)
 
 ```
-talosctl gen config $cluster_name $endpoint:6443
+# patching this to add additional configuration for bootstrapping, storage, and single node cluster scheduling
+talosctl gen config $cluster_name https://$endpoint:6443 \
+  --config-patch=@patch.yaml
 talosctl apply-config --insecure -n $endpoint --file controlplane.yaml
-talosctl --talosconfig=./talosconfig -n $endpoint bootstrap
-talosctl --talosconfig=./talosconfig kubeconfig --nodes $endpoint --endpoints $endpoint
-```
 
-If single node control plane, you may want to remove this taint to schedule pods
-```
-kubectl taint nodes talos-1a0-jcf node-role.kubernetes.io/control-plane:NoSchedule-
+export TALOSCONFIG=$(pwd)/talosconfig
+talosctl config endpoint $endpoint
+talosctl config node $endpoint
+
+# not needed if we patch with machine type 'init'
+# talosctl --talosconfig=./talosconfig -n $endpoint bootstrap
+talosctl --talosconfig=./talosconfig kubeconfig --nodes $endpoint --endpoints $endpoint
 ```

@@ -1,0 +1,6 @@
+machine:
+  type: init
+  install:
+    disk: /dev/nvme0n1
+cluster:
+  allowSchedulingOnControlPlanes: true 
