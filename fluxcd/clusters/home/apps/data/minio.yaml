@@ -13,6 +13,3 @@ spec:
         namespace: flux-system
       version: 1.0.0
   interval: 1m0s
-  values:
-    operator:
-      replicaCount: 1
