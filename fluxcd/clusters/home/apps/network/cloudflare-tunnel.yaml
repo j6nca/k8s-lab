@@ -16,3 +16,4 @@ spec:
   values:
     cloudflare:
       secretName: cloudflared-tunnel-token
+    replicaCount: 1
