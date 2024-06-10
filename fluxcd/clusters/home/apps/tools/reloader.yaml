@@ -1,12 +1,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: onepassword-connect
-  namespace: secret-ops
+  name: reloader
+  namespace: tools
 spec:
   chart:
     spec:
-      chart: charts/onepassword-connect
+      chart: charts/reloader
       sourceRef:
         kind: GitRepository
         name: j6nca-charts
