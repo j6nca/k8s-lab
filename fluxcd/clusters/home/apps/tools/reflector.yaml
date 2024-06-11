@@ -1,15 +1,15 @@
-# apiVersion: helm.toolkit.fluxcd.io/v2beta1
-# kind: HelmRelease
-# metadata:
-#   name: reflector
-#   namespace: tools
-# spec:
-#   chart:
-#     spec:
-#       chart: charts/reflector
-#       sourceRef:
-#         kind: GitRepository
-#         name: j6nca-charts
-#         namespace: flux-system
-#       version: 1.0.0
-#   interval: 1m0s
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: reflector
+  namespace: tools
+spec:
+  chart:
+    spec:
+      chart: charts/reflector
+      sourceRef:
+        kind: GitRepository
+        name: j6nca-charts
+        namespace: flux-system
+      version: 1.0.0
+  interval: 1m0s
