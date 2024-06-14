@@ -6,10 +6,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: charts/reflector
+      chart: reflector
       sourceRef:
-        kind: GitRepository
-        name: j6nca-charts
+        kind: HelmRepository
+        name: emberstack
         namespace: flux-system
-      version: 1.0.0
+      version: 7.1.262
   interval: 1m0s

@@ -6,10 +6,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: charts/crossplane
+      chart: crossplane
       sourceRef:
-        kind: GitRepository
-        name: j6nca-charts
+        kind: HelmRepository
+        name: crossplane
         namespace: flux-system
-      version: 1.0.0
+      version: 1.16.0
   interval: 1m0s

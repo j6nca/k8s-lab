@@ -1,18 +1,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: minio-operator
-  namespace: data
+  name: goldilocks
+  namespace: tools
 spec:
   chart:
     spec:
-      chart: minio
+      chart: goldilocks
       sourceRef:
         kind: HelmRepository
-        name: minio
+        name: fairwinds-stable
         namespace: flux-system
-      version: 5.0.15
+      version: 8.0.2
   interval: 1m0s
-  values:
-    operator:
-      replicaCount: 1

@@ -6,10 +6,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: charts/rook-ceph
+      chart: rook-ceph
       sourceRef:
-        kind: GitRepository
-        name: j6nca-charts
+        kind: HelmRepository
+        name: rook-release
         namespace: flux-system
-      version: 1.0.0
+      version: "v1.14.6"
   interval: 1m0s

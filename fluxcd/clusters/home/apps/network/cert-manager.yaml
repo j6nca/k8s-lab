@@ -1,17 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: cloudflare-tunnel
+  name: cert-manager
   namespace: network
 spec:
   chart:
     spec:
-      chart: cloudflare-tunnel
+      chart: cert-manager
       sourceRef:
         kind: HelmRepository
-        name: cloudflare
+        name: jetstack
         namespace: flux-system
-      version: 0.3.0
+      version: "v1.15.0"
   interval: 1m0s
   values:
     cloudflare-tunnel:

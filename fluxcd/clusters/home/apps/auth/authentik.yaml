@@ -6,10 +6,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: charts/authentik
+      chart: authentik
       sourceRef:
-        kind: GitRepository
-        name: j6nca-charts
+        kind: HelmRepository
+        name: authentik
         namespace: flux-system
-      version: 1.0.0
+      version: 2024.4.2
   interval: 1m0s
