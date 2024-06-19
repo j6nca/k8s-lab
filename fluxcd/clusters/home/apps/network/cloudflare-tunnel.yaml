@@ -15,6 +15,7 @@ spec:
   interval: 1m0s
   dependsOn:
     - name: external-secrets
+      namespace: secret-ops
   values:
     cloudflare-tunnel:
       cloudflare:
