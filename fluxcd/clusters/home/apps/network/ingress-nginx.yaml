@@ -13,11 +13,3 @@ spec:
         namespace: flux-system
       version: 4.10.1
   interval: 1m0s
-  dependsOn:
-    - name: external-secrets
-      namespace: secret-ops
-  values:
-    cloudflare-tunnel:
-      cloudflare:
-        secretName: cloudflared-tunnel-credentials
-      replicaCount: 1
