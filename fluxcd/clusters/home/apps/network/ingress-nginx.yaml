@@ -1,18 +1,23 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: alloy
-  namespace: observability
+  name: ingress-nginx
+  namespace: network
 spec:
   chart:
     spec:
-      chart: alloy
+      chart: ingress-nginx
       sourceRef:
         kind: HelmRepository
-        name: grafana
+        name: ingress-nginx
         namespace: flux-system
-      version: 0.3.2
+      version: 4.10.1
   interval: 1m0s
   dependsOn:
     - name: external-secrets
       namespace: secret-ops
+  values:
+    cloudflare-tunnel:
+      cloudflare:
+        secretName: cloudflared-tunnel-credentials
+      replicaCount: 1
