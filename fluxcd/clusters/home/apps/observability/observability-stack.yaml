@@ -1,17 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: alloy
+  name: observability-stack
   namespace: observability
 spec:
   chart:
     spec:
-      chart: alloy
+      chart: observability-stack
       sourceRef:
         kind: HelmRepository
-        name: grafana
+        name: j6nca-charts
         namespace: flux-system
-      version: 0.3.2
+      version: 1.0.0
   interval: 1m0s
   dependsOn:
     - name: external-secrets
