@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: observability-stack
+      chart: charts/observability-stack
       sourceRef:
         kind: GitRepository
         name: j6nca-charts
