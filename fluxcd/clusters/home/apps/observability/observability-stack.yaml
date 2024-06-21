@@ -8,7 +8,7 @@ spec:
     spec:
       chart: observability-stack
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: j6nca-charts
         namespace: flux-system
       version: 1.0.0
