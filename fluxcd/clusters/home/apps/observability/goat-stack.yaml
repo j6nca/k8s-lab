@@ -1,12 +1,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: observability-stack
+  name: goat-stack
   namespace: observability
 spec:
   chart:
     spec:
-      chart: charts/observability-stack
+      chart: charts/goat-stack
       sourceRef:
         kind: GitRepository
         name: j6nca-charts
