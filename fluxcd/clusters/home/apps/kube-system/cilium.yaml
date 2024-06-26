@@ -21,3 +21,12 @@ spec:
       autoMount:
         enabled: false
       hostRoot: /sys/fs/cgroup
+    operator:
+      replicas: 1
+    hubble:
+      relay:
+        enabled: true
+      ui:
+        enabled: true
+    hostFirewall:
+      enabled: true
