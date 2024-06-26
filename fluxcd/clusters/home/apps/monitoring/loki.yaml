@@ -83,5 +83,4 @@ spec:
       replicas: 0 
     
     serviceAccount:
-      create: true
       name: loki-minio-sa
