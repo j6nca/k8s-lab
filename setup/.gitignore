@@ -1,4 +1,4 @@
-controlplane.yaml
-talosconfig
-worker.yaml
+controlplane.yaml*
+talosconfig*
+worker.yaml*
 windows/

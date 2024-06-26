@@ -4,3 +4,6 @@ machine:
     disk: /dev/nvme0n1
 cluster:
   allowSchedulingOnControlPlanes: true 
+  network:
+    cni:
+      name: none
