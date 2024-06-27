@@ -17,7 +17,7 @@ spec:
     config:
       endpoints:
         - name: kube-ops-view
-          url: kube-ops-view.tools.svc.cluster.local:8080
+          url: kube-ops-view.tools.svc.cluster.local:80
           conditions:
             - '[STATUS] == 200'
         - name: grafana
