@@ -24,7 +24,7 @@ spec:
           interval: 5m
         - name: grafana
           group: monitoring
-          url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:3000
+          url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80
           conditions:
             - '[STATUS] == 200'
           interval: 5m
