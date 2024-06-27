@@ -17,7 +17,7 @@ spec:
     config:
       endpoints:
         - name: kube-ops-view
-          group: monitoring
+          group: tools
           type: HTTP
           url: kube-ops-view.tools.svc.cluster.local:80
           conditions:
