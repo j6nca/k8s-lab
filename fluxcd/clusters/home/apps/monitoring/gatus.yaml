@@ -18,22 +18,19 @@ spec:
       endpoints:
         - name: kube-ops-view
           group: tools
-          type: HTTP
-          url: kube-ops-view.tools.svc.cluster.local:80
+          url: http://kube-ops-view.tools.svc.cluster.local:80
           conditions:
             - '[STATUS] == 200'
           interval: 5m
         - name: grafana
           group: monitoring
-          type: HTTP
-          url: kube-prometheus-stack-grafana.monitoring.svc.cluster.local:3000
+          url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:3000
           conditions:
             - '[STATUS] == 200'
           interval: 5m
         - name: prometheus
           group: monitoring
-          type: HTTP
-          url: kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
+          url: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
           conditions:
             - '[STATUS] == 200'
           interval: 5m
