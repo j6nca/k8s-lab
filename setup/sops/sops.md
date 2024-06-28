@@ -1,0 +1,3 @@
+```
+./generate-sops.sh
+```

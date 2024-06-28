@@ -1,0 +1,6 @@
+**controlplane.yaml*
+**talosconfig*
+**worker.yaml*
+**sops.asc*
+**.DS_Store
+windows/
