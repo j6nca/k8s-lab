@@ -1,5 +1,4 @@
 **controlplane.yaml*
-**talosconfig*
 **worker.yaml*
 **sops.asc*
 **.agekey*
