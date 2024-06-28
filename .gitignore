@@ -2,5 +2,6 @@
 **talosconfig*
 **worker.yaml*
 **sops.asc*
+**.agekey*
 **.DS_Store
 windows/
