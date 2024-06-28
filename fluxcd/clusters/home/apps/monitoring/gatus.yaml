@@ -36,7 +36,7 @@ spec:
           interval: 5m
         - name: it-tools
           group: tools
-          url: http://it-tools.tools.svc.cluster.local:8080
+          url: http://it-tools.tools.svc.cluster.local:80
           conditions:
             - '[STATUS] == 200'
           interval: 5m
