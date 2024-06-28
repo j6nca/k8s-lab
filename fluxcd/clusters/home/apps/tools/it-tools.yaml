@@ -1,12 +1,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: yopass
+  name: it-tools
   namespace: tools
 spec:
   chart:
     spec:
-      chart: charts/yopass
+      chart: charts/it-tools
       sourceRef:
         kind: GitRepository
         name: j6nca-charts

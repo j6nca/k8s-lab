@@ -34,3 +34,9 @@ spec:
           conditions:
             - '[STATUS] == 200'
           interval: 5m
+        - name: yopass
+          group: tools
+          url: http://yopass.tools.svc.cluster.local:1337
+          conditions:
+            - '[STATUS] == 200'
+          interval: 5m
