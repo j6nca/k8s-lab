@@ -20,5 +20,5 @@ talosctl --talosconfig=./talosconfig kubeconfig --nodes $endpoint --endpoints $e
 
 Patching config
 ```
-talosctl --talosconfig=./talosconfig -n <IP> patch machineconfig -p @kubelet-patch.json -p @manifest-patch.json
+talosctl --talosconfig=./talosconfig -n <IP> -e <IP> patch machineconfig -p @patch.yaml
 ```
