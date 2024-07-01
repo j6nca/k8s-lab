@@ -19,7 +19,8 @@ spec:
   values:
     extraArgs:
     - --cloudflare-dns-records-per-page=5000
-    provider: cloudflare
+    provider: 
+      name: cloudflare
       domainFilters:
       - j6n.ca
       env:
