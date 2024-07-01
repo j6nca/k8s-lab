@@ -16,3 +16,13 @@ spec:
   dependsOn:
     - name: external-secrets
       namespace: secret-ops
+  values:
+    provider: cloudflare
+      domainFilters:
+      - j6n.ca
+      env:
+      - name: CF_API_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: cloudflare-dns
+            key: token
