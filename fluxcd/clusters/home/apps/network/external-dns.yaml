@@ -17,6 +17,8 @@ spec:
     - name: external-secrets
       namespace: secret-ops
   values:
+    extraArgs:
+    - --cloudflare-dns-records-per-page=5000
     provider: cloudflare
       domainFilters:
       - j6n.ca
