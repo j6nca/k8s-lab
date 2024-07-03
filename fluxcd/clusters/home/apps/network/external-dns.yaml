@@ -23,9 +23,9 @@ spec:
       name: cloudflare
       domainFilters:
       - j6n.ca
-      env:
-      - name: CF_API_TOKEN
-        valueFrom:
-          secretKeyRef:
-            name: cloudflare-dns
-            key: token
+    env:
+    - name: CF_API_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: cloudflare-dns
+          key: token
