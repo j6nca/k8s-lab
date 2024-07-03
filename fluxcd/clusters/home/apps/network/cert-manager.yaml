@@ -14,7 +14,4 @@ spec:
       version: "v1.15.0"
   interval: 1m0s
   values:
-    cloudflare-tunnel:
-      cloudflare:
-        secretName: cloudflared-tunnel-credentials
-      replicaCount: 1
+    installCRDs: true
