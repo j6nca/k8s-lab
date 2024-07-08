@@ -1,0 +1,9 @@
+apiVersion: builtin
+kind: LabelTransformer
+metadata:
+  name: team-test-labels
+labels:
+  j6n.ca/AppCode: NGI0
+fieldSpecs:
+- path: metadata/labels
+  create: true
