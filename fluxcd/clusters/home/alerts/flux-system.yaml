@@ -1,0 +1,17 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: flux-system-alerts
+  namespace: flux-system
+spec:
+  summary: "alerts from the flux-system"
+  eventMetadata:
+    cluster: "lab"
+  providerRef:
+    name: discord
+  eventSeverity: info
+  eventSources:
+    - kind: GitRepository
+      name: '*'
+    - kind: Kustomization
+      name: '*'
