@@ -16,3 +16,9 @@ kubectl create secret generic onepassword-token -n secret-ops --from-literal=tok
 ```
 
 Note: Above method for creating `op-credentials` may not work, the credentials file needs to be double base64 encoded. Source: https://external-secrets.io/v0.5.7/provider-1password-automation/#setup-authentication
+
+## Sops
+
+```
+kubectl create secret generic onepassword-token -n secret-ops --from-literal=token=$TOKEN
+```

@@ -18,7 +18,7 @@ flux bootstrap github \
   --owner=j6nca \
   --repository=k8s-lab \
   --branch=main \
-  --path=fluxcd/clusters/home \
+  --path=fluxcd/clusters/lab \
   --personal \
   --private=false
 ```
