@@ -14,4 +14,5 @@ spec:
       version: "v1.15.0"
   interval: 1m0s
   values:
-    installCRDs: true
+    crds:
+      enabled: true
