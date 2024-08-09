@@ -7,7 +7,7 @@ Troubleshooting docs found [here](https://www.talos.dev/v1.7/introduction/troubl
 # patching this to add additional configuration for bootstrapping, storage, and single node cluster scheduling
 talosctl gen config lab https://$endpoint:6443 \
   --config-patch=@patch.yaml
-talosctl apply-config --insecure -n 192.168.8.25 --file controlplane.yaml
+talosctl apply-config --insecure -n 192.168.1.112 --file controlplane.yaml
 
 export TALOSCONFIG=$(pwd)/talosconfig
 talosctl config endpoint $endpoint
@@ -20,12 +20,12 @@ talosctl --talosconfig=./talosconfig kubeconfig --nodes $endpoint --endpoints $e
 
 Patching config
 ```
-talosctl --talosconfig=./talosconfig -n 192.168.8.25 -e 192.168.8.25 patch machineconfig -p @patch.yaml
+talosctl --talosconfig=./talosconfig -n 192.168.1.112 -e 192.168.1.112 patch machineconfig -p @patch.yaml
 ```
 
 Restart Node
 ```
-talosctl --talosconfig=./talosconfig -n 192.168.8.25 -e 192.168.8.25 restart
+talosctl --talosconfig=./talosconfig -n 192.168.1.112 -e 192.168.1.112 restart
 ```
 
 Decrypt with sops
@@ -35,5 +35,5 @@ sops -d -i --input-type yaml --output-type yaml ./talosconfig
 
 Troubleshooting
 ```
-talosctl --talosconfig=./talosconfig -n 192.168.8.25 health
+talosctl --talosconfig=./talosconfig -n 192.168.1.112 health
 ```
