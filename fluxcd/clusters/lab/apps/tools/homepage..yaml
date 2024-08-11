@@ -82,8 +82,8 @@ spec:
             - Gatus:
                 href: http://localhost/
                 description: Homepage is 😎
-            - Grafana
-                href:
+            - Grafana:
+                href: http://localhost/ 
                 widget:
                   type: grafana
                   url: http://grafana.host.or.ip:port
