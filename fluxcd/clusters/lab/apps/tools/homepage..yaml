@@ -13,3 +13,101 @@ spec:
         namespace: flux-system
       version: 1.0.0
   interval: 1m0s
+  values:
+    configuration:
+      kubernetes_yaml: |
+        mode: cluster
+      settings_yaml: ""
+      #settings_yaml: |
+      #  providers:
+      #    longhorn:
+      #      url: https://longhorn.my.network
+      custom_css: ""
+      custom_js: ""
+      bookmarks_yaml: |
+        - Developer:
+            - Github:
+                - abbr: GH
+                  icon: github.svg
+                  href: https://github.com
+      services_yaml: |
+        - Networking:
+            - PiHole:
+                href: http://localhost/
+                widget:
+                  type: pihole
+                  url: http://pi.hole.or.ip
+                  key: yourpiholeapikey # optional
+            - OPNSense:
+                href: http://localhost/
+                widget:
+                  type: opnsense
+                  url: http://opnsense.host.or.ip
+                  username: key
+                  password: secret
+
+        - Media Server:
+            - Jellyfin:
+                href: https://watch.j6n.ca
+                icon: jellyfin.svg
+                widget:
+                  type: jellyfin
+                  url: https://watch.j6n.ca
+                  key: apikeyapikeyapikeyapikeyapikey
+                  enableBlocks: true
+                  enableNowPlaying: true
+            - Jellyseer:
+                href: https://jellyseer.j6n.ca
+                icon: jellyseer.svg
+                widget:
+                  type: jellyseer
+                  url: https://jellyseer.j6n.ca
+                  key: apikeyapikeyapikeyapikeyapikey
+            - Sonarr:
+                href: https://watch.j6n.ca
+                icon: sonarr.svg
+                widget:
+                  type: sonarr
+                  url: https://watch.j6n.ca
+                  key: apikeyapikeyapikeyapikeyapikey
+            - Radarr:
+                href: https://watch.j6n.ca
+                icon: radarr.svg
+                widget:
+                  type: radarr
+                  url: https://watch.j6n.ca
+                  key: apikeyapikeyapikeyapikeyapikey
+
+        - Monitoring:
+            - Gatus:
+                href: http://localhost/
+                description: Homepage is 😎
+            - Grafana
+                href:
+                widget:
+                  type: grafana
+                  url: http://grafana.host.or.ip:port
+                  username: username
+                  password: password
+      widgets_yaml: |
+        - kubernetes:
+            cluster:
+              show: true
+              cpu: true
+              memory: true
+              showLabel: true
+              label: "cluster"
+            nodes:
+              show: true
+              cpu: true
+              memory: true
+              showLabel: true
+        - resources:
+            backend: resources
+            expanded: true
+            cpu: true
+            memory: true
+        - search:
+            provider: duckduckgo
+            target: _blank
+      docker_yaml: ""
