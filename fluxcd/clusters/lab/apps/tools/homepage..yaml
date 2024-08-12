@@ -11,26 +11,22 @@ spec:
         kind: GitRepository
         name: j6nca-charts
         namespace: flux-system
-      version: 1.1.0
+      version: 1.2.0
   interval: 1m0s
   values:
     configuration:
-      kubernetes_yaml: |
+      kubernetes: |
         mode: cluster
-      settings_yaml: ""
-      #settings_yaml: |
-      #  providers:
-      #    longhorn:
-      #      url: https://longhorn.my.network
+      settings: ""
       custom_css: ""
       custom_js: ""
-      bookmarks_yaml: |
+      bookmarks: |
         - Developer:
             - Github:
                 - abbr: GH
                   icon: github.svg
                   href: https://github.com/j6nca
-      services_yaml: |
+      services: |
         - Networking:
             - PiHole:
                 href: http://localhost/
@@ -87,7 +83,7 @@ spec:
                   url: http://grafana.host.or.ip:port
                   username: username
                   password: password
-      widgets_yaml: |
+      widgets: |
         - kubernetes:
             cluster:
               show: true
@@ -108,4 +104,4 @@ spec:
         - search:
             provider: duckduckgo
             target: _blank
-      docker_yaml: ""
+      docker: ""
