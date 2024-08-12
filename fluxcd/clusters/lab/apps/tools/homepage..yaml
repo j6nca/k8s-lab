@@ -11,22 +11,26 @@ spec:
         kind: GitRepository
         name: j6nca-charts
         namespace: flux-system
-      version: 1.2.0
+      version: 1.3.0
   interval: 1m0s
   values:
+    metadata:
+      service: homepage
+      environment: local
+      managedBy: fluxcd
     config:
-      kubernetes: |
+      kubernetes:
         mode: cluster
       settings: ""
       custom_css: ""
       custom_js: ""
-      bookmarks: |
+      bookmarks:
         - Developer:
             - Github:
                 - abbr: GH
                   icon: github.svg
                   href: https://github.com/j6nca
-      services: |
+      services:
         - Networking:
             - PiHole:
                 href: http://localhost/
@@ -83,7 +87,7 @@ spec:
                   url: http://grafana.host.or.ip:port
                   username: username
                   password: password
-      widgets: |
+      widgets:
         - kubernetes:
             cluster:
               show: true
