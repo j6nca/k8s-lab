@@ -25,7 +25,10 @@ spec:
       custom_css: ""
       custom_js: ""
       bookmarks:
-        - Developer:
+        - Sites:
+            - Blog:
+                - icon: mkdocs.svg
+                  href: https://notes.j6n.ca
             - Github:
                 - abbr: GH
                   icon: github.svg
