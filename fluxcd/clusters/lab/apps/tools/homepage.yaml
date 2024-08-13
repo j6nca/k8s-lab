@@ -97,6 +97,9 @@ spec:
                 #   url: http://grafana.host.or.ip:port
                 #   username: username
                 #   password: password
+            - Kube-Ops-View:
+                href: http://localhost/
+                icon: kubernetes.svg
         - Gaming:
             - Pterodactyl:
                 href: http://localhost/
@@ -105,6 +108,12 @@ spec:
             - Actual:
                 href: http://localhost/
                 icon: actual.png
+            - Yopass:
+                href: http://localhost/
+                icon: https://yopass.se/yopass.svg
+            - IT-Tools:
+                href: http://localhost/
+                icon: kubernetes.svg
       widgets:
         - kubernetes:
             cluster:
