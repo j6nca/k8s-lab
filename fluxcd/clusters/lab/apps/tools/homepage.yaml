@@ -21,7 +21,12 @@ spec:
     config:
       kubernetes:
         mode: cluster
-      settings: ""
+      settings:
+        title: My homelab homepage
+        layout:
+          Media:
+            style: row
+            columns: 4
       custom_css: ""
       custom_js: ""
       bookmarks:
@@ -33,23 +38,7 @@ spec:
                 - icon: github.svg
                   href: https://github.com/j6nca
       services:
-        - Networking:
-            - PiHole:
-                href: http://localhost/
-                icon: pihole.svg
-                # widget:
-                #   type: pihole
-                #   url: http://pi.hole.or.ip
-                #   key: yourpiholeapikey # optional
-            - OPNSense:
-                href: http://localhost/
-                icon: opnsense.svg
-                # widget:
-                #   type: opnsense
-                #   url: http://opnsense.host.or.ip
-                #   username: key
-                #   password: secret
-        - Media Server:
+        - Media:
             - Jellyfin:
                 href: https://watch.j6n.ca
                 icon: jellyfin.svg
@@ -61,7 +50,7 @@ spec:
                 #   enableNowPlaying: true
             - Jellyseer:
                 href: https://jellyseer.j6n.ca
-                icon: jellyseer.svg
+                icon: jellyseerr.svg
                 # widget:
                 #   type: jellyseer
                 #   url: https://jellyseer.j6n.ca
@@ -80,18 +69,42 @@ spec:
                 #   type: radarr
                 #   url: https://watch.j6n.ca
                 #   key: apikeyapikeyapikeyapikeyapikey
+        - Networking:
+            - PiHole:
+                href: http://localhost/
+                icon: pi-hole.svg
+                # widget:
+                #   type: pihole
+                #   url: http://pi.hole.or.ip
+                #   key: yourpiholeapikey # optional
+            - OPNSense:
+                href: http://localhost/
+                icon: opnsense.svg
+                # widget:
+                #   type: opnsense
+                #   url: http://opnsense.host.or.ip
+                #   username: key
+                #   password: secret
         - Monitoring:
             - Gatus:
                 href: http://localhost/
-                description: Homepage is 😎
+                icon: gatus.svg
             - Grafana:
                 href: http://localhost/
-                icon: grafana.svg 
+                icon: grafana.svg
                 # widget:
                 #   type: grafana
                 #   url: http://grafana.host.or.ip:port
                 #   username: username
                 #   password: password
+        - Gaming:
+            - Pterodactyl:
+                href: http://localhost/
+                icon: pterodactyl.svg
+        - Tools:
+            - Actual:
+                href: http://localhost/
+                icon: actual.png
       widgets:
         - kubernetes:
             cluster:
