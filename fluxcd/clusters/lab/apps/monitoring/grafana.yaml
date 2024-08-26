@@ -13,3 +13,14 @@ spec:
         namespace: flux-system
       version: 8.0.2
   interval: 1m0s
+  values:
+    admin:
+      existingSecret: grafana-admin
+      userKey: admin-user
+      passwordKey: admin-password
+    # extraLabels:
+    #   <<: *metadata
+    # podLabels:
+    #   <<: *metadata
+    plugins:
+      - grafana-oncall-app

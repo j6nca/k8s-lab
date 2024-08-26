@@ -14,9 +14,25 @@ spec:
       version: 1.7.2
   interval: 1m0s
   values:
+    grafana:
+      enabled: false
+    externalGrafana:
+      url: grafana
     ingress-nginx:
       enabled: false
-
     cert-manager:
       enabled: false
-      
+    ingress:
+      enabled: false
+    # use postgres chart here for testing since we will likely use that as the external backend
+    database:
+      type: postgresql
+    mariadb:
+      enabled: false
+    postgresql:
+      enabled: true
+      auth:
+        existingSecret: oncall-postgres-admin
+    # engine:
+    #   podLabels:
+    #     <<: *metadata
