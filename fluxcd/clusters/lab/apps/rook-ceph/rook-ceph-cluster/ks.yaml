@@ -9,7 +9,7 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: rook-ceph-cluster
-  path: ./fluxcd/clusters/lab/apps/rook-ceph/rook-ceph/app
+  path: ./fluxcd/clusters/lab/apps/rook-ceph/rook-ceph-cluster/app
   prune: false
   sourceRef:
     kind: GitRepository
