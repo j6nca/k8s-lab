@@ -1,0 +1,20 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: external-secrets
+  namespace: flux-system
+spec:
+  targetNamespace: secret-ops
+  commonMetadata:
+    labels:
+      app.kubernetes.io/name: external-secrets
+  path: ./fluxcd/clusters/lab/apps/secret-ops/external-secrets/app
+  prune: false
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  wait: false
+  interval: 10m
+  retryInterval: 1m
+  timeout: 5m
