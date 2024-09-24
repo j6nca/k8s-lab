@@ -1,0 +1,20 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: grafana-operator
+  namespace: flux-system
+spec:
+  targetNamespace: grafana
+  commonMetadata:
+    labels:
+      app.kubernetes.io/name: grafana-operator
+  path: ./fluxcd/clusters/lab/apps/grafana/grafana-operator/app
+  prune: false
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  wait: false
+  interval: 10m
+  retryInterval: 1m
+  timeout: 5m
