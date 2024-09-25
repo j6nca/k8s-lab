@@ -8,5 +8,4 @@ spec:
     kind: OCIRepository
     name: grafana
     namespace: flux-system
-  version: "v5.13.0"
   interval: 1m0s
