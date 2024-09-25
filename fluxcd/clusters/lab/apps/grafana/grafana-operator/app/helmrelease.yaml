@@ -1,16 +1,12 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: grafana-operator
   namespace: grafana
 spec:
-  chart:
-    spec:
-      chartRef:
-        kind: OCIRepository
-        name: grafana
-        namespace: flux-system
-      version: "v5.13.0 "
+  chartRef:
+    kind: OCIRepository
+    name: grafana
+    namespace: flux-system
+  version: "v5.13.0"
   interval: 1m0s
-  dependsOn:
-    - name: onepassword-connect
