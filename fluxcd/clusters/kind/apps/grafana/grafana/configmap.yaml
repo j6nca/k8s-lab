@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: helm-testing-grafana-plugin-provisioning
   labels:
-    app: {{ include "oncall.name" . }}
+    app: grafana
 data:
   grafana-oncall-app-provisioning.yaml: |
     apps:
