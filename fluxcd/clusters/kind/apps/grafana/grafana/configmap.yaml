@@ -14,4 +14,4 @@ data:
         jsonData:
           stackId: 5
           orgId: 100
-          onCallApiUrl: http://oncall.oncall.svc.cluster.local:8080
+          onCallApiUrl: http://oncall-engine.oncall.svc.cluster.local:8080
