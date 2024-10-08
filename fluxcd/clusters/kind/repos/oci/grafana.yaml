@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: grafana
+  namespace: flux-system
+spec:
+  interval: 30m
+  url: oci://ghcr.io/grafana/helm-charts/grafana-operator
+  ref:
+    tag: "v5.13.0"
