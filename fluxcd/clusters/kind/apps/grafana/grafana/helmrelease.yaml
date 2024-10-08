@@ -44,5 +44,3 @@ spec:
     #   <<: *metadata
     # podLabels:
     #   <<: *metadata
-    plugins:
-      - grafana-oncall-app
