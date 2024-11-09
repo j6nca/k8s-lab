@@ -18,9 +18,5 @@ spec:
       existingSecret: grafana-admin
       userKey: admin-user
       passwordKey: admin-password
-    # extraLabels:
-    #   <<: *metadata
-    # podLabels:
-    #   <<: *metadata
     plugins:
       - grafana-oncall-app

@@ -33,6 +33,3 @@ spec:
       enabled: true
       auth:
         existingSecret: oncall-postgres-admin
-    # engine:
-    #   podLabels:
-    #     <<: *metadata
