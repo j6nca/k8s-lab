@@ -1,9 +1,10 @@
 creation_rules:
+  # Bootstrap files
   - path_regex: setup/.*.yaml
     encrypted_regex: ^(data|stringData|key)$
     age: age1vt35hurma8s7esaurhhnlyf5lks8xsr8zht6vgpag2fj4wx7na0qd0yavj
-
-  - path_regex: .*.yaml
+  # Cluster secrets
+  - path_regex: fluxcd/.*.yaml
     encrypted_regex: ^(data|stringData)$
     age: >-
       age12m4fp9cc4mn0k3dv4sq7z98gzty5rls0aj8jmtj8ttpzs5uc7sds05p9v4,
@@ -12,3 +13,6 @@ creation_rules:
   - path_regex: setup/kubeconfig
     encrypted_regex: ^client-key-data$
     age: age1vt35hurma8s7esaurhhnlyf5lks8xsr8zht6vgpag2fj4wx7na0qd0yavj
+stores:
+  yaml:
+    indent: 2

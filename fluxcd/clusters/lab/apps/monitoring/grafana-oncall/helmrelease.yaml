@@ -1,35 +1,35 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
-metadata:
-  name: grafana-oncall
-  namespace: monitoring
-spec:
-  chart:
-    spec:
-      chart: oncall
-      sourceRef:
-        kind: HelmRepository
-        name: grafana
-        namespace: flux-system
-      version: 1.7.2
-  interval: 1m0s
-  values:
-    grafana:
-      enabled: false
-    externalGrafana:
-      url: grafana
-    ingress-nginx:
-      enabled: false
-    cert-manager:
-      enabled: false
-    ingress:
-      enabled: false
-    # use postgres chart here for testing since we will likely use that as the external backend
-    database:
-      type: postgresql
-    mariadb:
-      enabled: false
-    postgresql:
-      enabled: true
-      auth:
-        existingSecret: oncall-postgres-admin
+# apiVersion: helm.toolkit.fluxcd.io/v2beta1
+# kind: HelmRelease
+# metadata:
+#   name: grafana-oncall
+#   namespace: monitoring
+# spec:
+#   chart:
+#     spec:
+#       chart: oncall
+#       sourceRef:
+#         kind: HelmRepository
+#         name: grafana
+#         namespace: flux-system
+#       version: 1.7.2
+#   interval: 1m0s
+#   values:
+#     grafana:
+#       enabled: false
+#     externalGrafana:
+#       url: grafana
+#     ingress-nginx:
+#       enabled: false
+#     cert-manager:
+#       enabled: false
+#     ingress:
+#       enabled: false
+#     # use postgres chart here for testing since we will likely use that as the external backend
+#     database:
+#       type: postgresql
+#     mariadb:
+#       enabled: false
+#     postgresql:
+#       enabled: true
+#       auth:
+#         existingSecret: oncall-postgres-admin
