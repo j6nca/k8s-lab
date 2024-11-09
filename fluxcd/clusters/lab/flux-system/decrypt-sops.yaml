@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./fluxcd/clusters/lab
+  path: ./fluxcd/clusters/lab/flux-system
   prune: true
   sourceRef:
     kind: GitRepository
