@@ -11,5 +11,5 @@ spec:
         kind: HelmRepository
         name: mend-renovate-cc-ee
         namespace: flux-system
-      version: 0.12.3
+      version: 8.6.0
   interval: 1m0s
