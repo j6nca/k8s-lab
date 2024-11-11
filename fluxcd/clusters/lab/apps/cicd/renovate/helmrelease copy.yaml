@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: renovate
+  namespace: cicd
+spec:
+  chart:
+    spec:
+      chart: mend-renovate-ce
+      sourceRef:
+        kind: HelmRepository
+        name: mend-renovate-cc-ee
+        namespace: flux-system
+      version: 0.12.3
+  interval: 1m0s
