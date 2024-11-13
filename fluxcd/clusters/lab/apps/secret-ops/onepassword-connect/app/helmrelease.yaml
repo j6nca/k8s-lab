@@ -6,10 +6,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: connect
+      chart: onepassword-connect
       sourceRef:
-        kind: HelmRepository
-        name: onepassword
+        kind: GitRepository
+        name: j6nca
         namespace: flux-system
-      version: 1.15.0
+      version: 1.0.0
   interval: 1m0s
