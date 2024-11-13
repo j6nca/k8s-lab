@@ -8,7 +8,7 @@ spec:
     spec:
       chart: onepassword-connect
       sourceRef:
-        kind: GitRepository
+        kind: HelmRepository
         name: j6nca
         namespace: flux-system
       version: 1.0.0
