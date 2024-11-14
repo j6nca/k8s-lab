@@ -15,3 +15,6 @@ spec:
   interval: 1m0s
   dependsOn:
     - name: onepassword-connect
+  values:
+    external-secrets:
+      installCRDS: true
