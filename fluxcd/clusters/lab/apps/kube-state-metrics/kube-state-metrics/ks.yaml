@@ -1,0 +1,20 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: kube-state-metrics
+metadata:
+  name: descheduler
+  namespace: flux-system
+spec:
+  targetNamespace: kube-state-metrics
+  commonMetadata:
+    labels:
+      app.kubernetes.io/name: kube-state-metrics
+  path: ./fluxcd/clusters/lab/apps/kube-state-metrics/kube-state-metrics/app
+  prune: false
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  wait: false
+  interval: 10m
+  retryInterval: 1m
+  timeout: 5m
