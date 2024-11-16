@@ -11,5 +11,4 @@ spec:
   interval: 1m0s
   values:
     spegel:
-      spegel:
-        containerdRegistryConfigPath: /etc/cri/conf.d/hosts
+      containerdRegistryConfigPath: /etc/cri/conf.d/hosts
