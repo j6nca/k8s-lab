@@ -20,25 +20,3 @@ spec:
   interval: 10m
   retryInterval: 1m
   timeout: 5m
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: cloudflare-tunnel-secrets
-  namespace: flux-system
-spec:
-  targetNamespace: cloudflare-tunnel
-  commonMetadata:
-    labels:
-      app.kubernetes.io/name: cloudflare-tunnel
-  dependsOn:
-    - name: external-secrets-resources
-  path: ./fluxcd/clusters/lab/apps/cloudflare-tunnel/cloudflare-tunnel/secrets
-  prune: false
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  wait: false
-  interval: 10m
-  retryInterval: 1m
-  timeout: 5m
