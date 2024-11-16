@@ -9,8 +9,6 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: cloudflare-tunnel
-  dependsOn:
-    - name: cloudflare-tunnel-secrets
   path: ./fluxcd/clusters/lab/apps/cloudflare-tunnel/cloudflare-tunnel/app
   prune: false
   sourceRef:
