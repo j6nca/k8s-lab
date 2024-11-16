@@ -9,6 +9,8 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: external-secrets
+  dependsOn:
+    - name: onepassword-connect
   path: ./fluxcd/clusters/lab/apps/secret-ops/external-secrets/app
   prune: false
   sourceRef:
@@ -29,6 +31,8 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: external-secrets
+  dependsOn:
+    - name: external-secrets
   path: ./fluxcd/clusters/lab/apps/secret-ops/external-secrets/resources
   prune: false
   sourceRef:
