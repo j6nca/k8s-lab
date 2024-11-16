@@ -1,8 +1,8 @@
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: kube-state-metrics
+kind: Kustomization
 metadata:
-  name: descheduler
+  name: kube-state-metrics
   namespace: flux-system
 spec:
   targetNamespace: kube-state-metrics
