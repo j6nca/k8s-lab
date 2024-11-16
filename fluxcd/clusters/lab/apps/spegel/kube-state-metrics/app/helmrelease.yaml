@@ -1,0 +1,19 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: spegel
+  namespace: spegel
+spec:
+  chart:
+    spec:
+      chart: spegel
+      sourceRef:
+        kind: HelmRepository
+        name: j6nca
+        namespace: flux-system
+      version: 1.0.0
+  interval: 1m0s
+  values:
+    spegel:
+      spegel:
+        containerdRegistryConfigPath: /etc/cri/conf.d/hosts

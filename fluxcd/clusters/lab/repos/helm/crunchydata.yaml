@@ -1,8 +1,0 @@
-# apiVersion: source.toolkit.fluxcd.io/v1
-# kind: OCIRepository
-# metadata:
-#   name: crunchydata
-#   namespace: flux-system
-# spec:
-#   interval: 30m
-#   url: oci://registry.developers.crunchydata.com/crunchydata/pgo

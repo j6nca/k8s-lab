@@ -1,15 +1,15 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
-metadata:
-  name: buildkite-controller
-  namespace: cicd
-spec:
-  chart:
-    spec:
-      chart: agent-stack-k8s
-      sourceRef:
-        kind: HelmRepository
-        name: buildkite
-        namespace: flux-system
-      version: 0.12.3
-  interval: 1m0s
+# apiVersion: helm.toolkit.fluxcd.io/v2beta1
+# kind: HelmRelease
+# metadata:
+#   name: buildkite-controller
+#   namespace: cicd
+# spec:
+#   chart:
+#     spec:
+#       chart: agent-stack-k8s
+#       sourceRef:
+#         kind: HelmRepository
+#         name: buildkite
+#         namespace: flux-system
+#       version: 0.12.3
+#   interval: 1m0s
