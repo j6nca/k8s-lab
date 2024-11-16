@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cloudflare-tunnel
+spec:
+  chart:
+    spec:
+      chart: cloudflare-tunnel
+      sourceRef:
+        kind: HelmRepository
+        name: j6nca
+        namespace: flux-system
+      version: 1.0.0
+  interval: 1m0s
+  dependsOn:
+    - name: external-secrets
+      namespace: secret-ops
+  values:
+    cloudflare-tunnel:
+      cloudflare:
+        # If defined, no secret is created for the credentials, and instead, the secret referenced is used
+        secretName: cloudflare-tunnel-credentials
+        # If true, turn on WARP routing for TCP
+        enableWarp: true
+        # Define ingress rules for the tunnel. See
+        # https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/configuration-file/ingress
+        ingress: []
