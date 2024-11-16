@@ -4,14 +4,10 @@ metadata:
   name: spegel
   namespace: spegel
 spec:
-  chart:
-    spec:
-      chart: spegel
-      sourceRef:
-        kind: HelmRepository
-        name: j6nca
-        namespace: flux-system
-      version: 1.0.0
+  chartRef:
+    kind: OCIRepository
+    name: spegel
+    namespace: flux-system
   interval: 1m0s
   values:
     spegel:
