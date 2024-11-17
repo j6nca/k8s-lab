@@ -25,4 +25,6 @@ spec:
         enableWarp: true
         # Define ingress rules for the tunnel. See
         # https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/configuration-file/ingress
-        ingress: []
+        ingress:
+        - hostname: status.j6n.ca
+          service: http://gatus.monitoring.svc.cluster.local:80
