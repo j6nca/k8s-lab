@@ -14,16 +14,15 @@ spec:
   interval: 15m
   values:
     gatus:
+      metrics: true
+      ui:
+        header: Service Status
+        logo: 
       config:
         storage:
           type: memory
         endpoints:
-          - name: kube-ops-view
-            group: tools
-            url: http://kube-ops-view.tools.svc.cluster.local:80
-            conditions:
-              - '[STATUS] == 200'
-            interval: 5m
+          # monitoring
           - name: grafana
             group: monitoring
             url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80
@@ -35,6 +34,25 @@ spec:
             url: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
             conditions:
               - '[STATUS] == 200'
+          - name: goldpinger
+            group: monitoring
+            url: http://goldpinger.monitoring.svc.cluster.local:8081
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          - name: kube-state-metrics
+            group: tools
+            url: http://kube-state-metrics.kube-state-metrics.svc.cluster.local:8080
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          # tools
+          - name: kube-ops-view
+            group: tools
+            url: http://kube-ops-view.tools.svc.cluster.local:80
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
             interval: 5m
           - name: it-tools
             group: tools
@@ -54,3 +72,16 @@ spec:
             conditions:
               - '[STATUS] == 200'
             interval: 5m
+          - name: homepage
+            group: tools
+            url: http://homepage.tools.svc.cluster.local:3000
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          - name: opencost
+            group: tools
+            url: http://opencost.tools.svc.cluster.local:9090
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+
