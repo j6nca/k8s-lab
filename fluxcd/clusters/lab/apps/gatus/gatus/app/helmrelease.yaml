@@ -13,43 +13,44 @@ spec:
       version: 1.0.0
   interval: 15m
   values:
-    config:
-      storage:
-        type: memory
-      endpoints:
-        - name: kube-ops-view
-          group: tools
-          url: http://kube-ops-view.tools.svc.cluster.local:80
-          conditions:
-            - '[STATUS] == 200'
-          interval: 5m
-        - name: grafana
-          group: monitoring
-          url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80
-          conditions:
-            - '[STATUS] == 200'
-          interval: 5m
-        - name: prometheus
-          group: monitoring
-          url: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
-          conditions:
-            - '[STATUS] == 200'
-          interval: 5m
-        - name: it-tools
-          group: tools
-          url: http://it-tools.tools.svc.cluster.local:8181
-          conditions:
-            - '[STATUS] == 200'
-          interval: 5m
-        - name: yopass
-          group: tools
-          url: http://yopass.tools.svc.cluster.local:1337
-          conditions:
-            - '[STATUS] == 200'
-          interval: 5m
-        - name: headlamp
-          group: tools
-          url: http://headlamp.tools.svc.cluster.local:80
-          conditions:
-            - '[STATUS] == 200'
-          interval: 5m
+    gatus:
+      config:
+        storage:
+          type: memory
+        endpoints:
+          - name: kube-ops-view
+            group: tools
+            url: http://kube-ops-view.tools.svc.cluster.local:80
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          - name: grafana
+            group: monitoring
+            url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          - name: prometheus
+            group: monitoring
+            url: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          - name: it-tools
+            group: tools
+            url: http://it-tools.tools.svc.cluster.local:8181
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          - name: yopass
+            group: tools
+            url: http://yopass.tools.svc.cluster.local:1337
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          - name: headlamp
+            group: tools
+            url: http://headlamp.tools.svc.cluster.local:80
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
