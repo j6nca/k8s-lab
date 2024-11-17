@@ -1,0 +1,20 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kubelet-serving-cert-approver
+  namespace: flux-system
+spec:
+  targetNamespace: kubelet-serving-cert-approver
+  commonMetadata:
+    labels:
+      app.kubernetes.io/name: kubelet-serving-cert-approver
+  path: ./fluxcd/clusters/lab/apps/kubelet-serving-cert-approver/kubelet-serving-cert-approver/app
+  prune: false
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  wait: false
+  interval: 10m
+  retryInterval: 1m
+  timeout: 5m
