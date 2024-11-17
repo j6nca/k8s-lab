@@ -18,6 +18,7 @@ spec:
   values:
     cloudflare-tunnel:
       cloudflare:
+        tunnelName: "k8s-lab"
         # If defined, no secret is created for the credentials, and instead, the secret referenced is used
         secretName: cloudflare-tunnel-credentials
         # If true, turn on WARP routing for TCP
