@@ -27,4 +27,4 @@ spec:
         # https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/configuration-file/ingress
         ingress:
           - hostname: status.j6n.ca
-            service: http://gatus.monitoring.svc.cluster.local:80
+            service: http://gatus.gatus.svc.cluster.local:80
