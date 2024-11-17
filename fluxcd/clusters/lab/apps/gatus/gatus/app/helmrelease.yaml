@@ -14,11 +14,11 @@ spec:
   interval: 15m
   values:
     gatus:
-      metrics: true
-      ui:
-        header: Service Status
-        logo: 
       config:
+        metrics: true
+        ui:
+          header: Service Status
+          # logo: 
         storage:
           type: memory
         endpoints:
