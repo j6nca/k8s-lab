@@ -24,12 +24,14 @@ spec:
         endpoints:
           # monitoring
           - name: grafana
+            enabled: false
             group: monitoring
             url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80
             conditions:
               - '[STATUS] == 200'
             interval: 5m
           - name: prometheus
+            enabled: false
             group: monitoring
             url: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
             conditions:
