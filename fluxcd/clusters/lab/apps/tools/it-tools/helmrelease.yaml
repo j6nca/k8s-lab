@@ -6,10 +6,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: charts/it-tools
+      chart: it-tools
       sourceRef:
-        kind: GitRepository
-        name: j6nca-charts
+        kind: HelmRepository
+        name: j6nca
         namespace: flux-system
       version: 1.0.0
   interval: 15m
