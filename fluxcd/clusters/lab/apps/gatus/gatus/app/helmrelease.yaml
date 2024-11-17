@@ -34,6 +34,7 @@ spec:
             url: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
             conditions:
               - '[STATUS] == 200'
+            interval: 5m
           - name: goldpinger
             group: monitoring
             url: http://goldpinger.monitoring.svc.cluster.local:8081
@@ -47,25 +48,6 @@ spec:
               - '[STATUS] == 200'
             interval: 5m
           # tools
-          - name: kube-ops-view
-            group: tools
-            url: http://kube-ops-view.tools.svc.cluster.local:80
-            conditions:
-              - '[STATUS] == 200'
-            interval: 5m
-            interval: 5m
-          - name: it-tools
-            group: tools
-            url: http://it-tools.tools.svc.cluster.local:8181
-            conditions:
-              - '[STATUS] == 200'
-            interval: 5m
-          - name: yopass
-            group: tools
-            url: http://yopass.tools.svc.cluster.local:1337
-            conditions:
-              - '[STATUS] == 200'
-            interval: 5m
           - name: headlamp
             group: tools
             url: http://headlamp.tools.svc.cluster.local:80
@@ -78,10 +60,27 @@ spec:
             conditions:
               - '[STATUS] == 200'
             interval: 5m
+          - name: it-tools
+            group: tools
+            url: http://it-tools.tools.svc.cluster.local:8181
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
+          - name: kube-ops-view
+            group: tools
+            url: http://kube-ops-view.tools.svc.cluster.local:80
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
           - name: opencost
             group: tools
             url: http://opencost.tools.svc.cluster.local:9090
             conditions:
               - '[STATUS] == 200'
             interval: 5m
-
+          - name: yopass
+            group: tools
+            url: http://yopass.tools.svc.cluster.local:1337
+            conditions:
+              - '[STATUS] == 200'
+            interval: 5m
