@@ -12,7 +12,7 @@ spec:
         name: rook-release
         namespace: flux-system
       version: "v1.15.2"
-  interval: 1m0s
+  interval: 15m
   dependsOn:
     - name: rook-ceph
   values:

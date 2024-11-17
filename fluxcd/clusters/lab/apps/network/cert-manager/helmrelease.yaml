@@ -12,7 +12,7 @@ spec:
         name: jetstack
         namespace: flux-system
       version: "v1.15.0"
-  interval: 1m0s
+  interval: 15m
   values:
     crds:
       enabled: true

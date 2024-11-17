@@ -7,7 +7,7 @@ spec:
     kind: OCIRepository
     name: spegel
     namespace: flux-system
-  interval: 1m0s
+  interval: 15m
   values:
     spegel:
       containerdRegistryConfigPath: /etc/cri/conf.d/hosts

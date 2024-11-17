@@ -12,4 +12,4 @@ spec:
         name: stakater
         namespace: flux-system
       version: 1.0.107
-  interval: 1m0s
+  interval: 15m

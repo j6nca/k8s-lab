@@ -12,4 +12,4 @@ spec:
         name: rook-release
         namespace: flux-system
       version: "v1.14.6"
-  interval: 1m0s
+  interval: 15m

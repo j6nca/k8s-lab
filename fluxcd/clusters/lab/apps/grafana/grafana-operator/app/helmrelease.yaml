@@ -7,4 +7,4 @@ spec:
     kind: OCIRepository
     name: grafana
     namespace: flux-system
-  interval: 1m0s
+  interval: 15m

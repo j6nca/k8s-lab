@@ -11,4 +11,4 @@ spec:
         name: metrics-server
         namespace: flux-system
       version: 3.12.1
-  interval: 1m0s
+  interval: 15m
