@@ -14,11 +14,7 @@ spec:
   interval: 15m
   values:
     metrics-server:
-      args:
-        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
-        - --kubelet-use-node-status-port
-        - --metric-resolution=15s
-      metrics:
-        enabled: true
-      serviceMonitor:
-        enabled: true  
+      apiService:
+        insecureSkipTLSVerify: false
+      tls:
+        type: cert-manager 
