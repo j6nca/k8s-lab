@@ -15,4 +15,11 @@ spec:
   interval: 1m0s
   values:
     renovate:
-      existingSecret: renovate-config
+      renovate:
+        existingSecret: renovate-config
+        config: |
+          {
+            "platform": "github",
+            "autodiscover": "false",
+            "repositories": ["j6nca/helm-charts"]
+          }
